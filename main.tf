@@ -1,21 +1,20 @@
+#Note: Give your Username Password , source destination paths 
 resource "null_resource" "cluster" {
   connection {
-    host     = "3.95.155.117"
+    host     = "give your hostname,publicip ,"
     type     = "winrm"
     user     = "Administrator"
-    password = "3j7Rq;XI56S)Uz=qh.3-T3-SK-TQI=TG"
-    private_key = "privatekey.pem"
+    password = "yourpassword"
     timeout  = "30m"
   }
-
   provisioner "file" {
-    source      = "c:test.ps1"
-    destination = "C:/Windows/Temp/test.ps1"
+    source      = "c:exportcertificate.ps1"
+    destination = "C:/Windows/Temp/exportcertificate.ps1"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "powershell.exe -File C:/Windows/Temp/test.ps1"
+      "powershell.exe -File C:/Windows/Temp/exportcertificate.ps1"
     ]
   }
 }
