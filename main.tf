@@ -1,7 +1,7 @@
 #Note: Give your Username Password , source destination paths 
 resource "null_resource" "cluster" {
   connection {
-    host     = "give your hostname,publicip ,"
+    host     = "give your hostname or ip of instance ,"
     type     = "winrm"
     user     = "Administrator"
     password = "yourpassword"
