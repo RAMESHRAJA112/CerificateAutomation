@@ -113,6 +113,17 @@ winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 
 winrm set winrm/config/service/auth '@{Basic="true"}'
 
+# Terraform 
+
+Setup terraform , here we used "choco install terraform"
+
+# NOTE: There are Two powershell Scripts which you can directly run in powershell 7 , if you want to integrate with terraform we can use terraform script 
+
+
+ 
+
+
+
 
 
 
